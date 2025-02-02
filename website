@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROinDATA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.dropbox.com/scl/fi/1xamgvgqqcbbzojnf63k5/field-7217003_1280.jpg?rlkey=5kwz0dm1xoakoo3xznliabcjx&st=ylo1f9v5&raw=1');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 300px;
+            height: 300px;
+        }
+        .login-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-box a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .login-box img {
+            width: 10px;
+            height: 10px;
+            margin-left: 5px;
+        }
+        .timeline {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .timeline button {
+            background: darkgreen;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .timeline button:hover {
+            background: green;
+        }
+        .popup {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .videos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .videos iframe {
+            margin: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-top: 50px;
+        }
+        footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            header img {
+                width: 200px;
+                height: 200px;
+            }
+            .login-box {
+                top: 10px;
+                right: 10px;
+                padding: 5px;
+            }
+            .timeline button {
+                width: 100%;
+                margin: 5px 0;
+            }
+            .videos iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.dropbox.com/scl/fi/7ye13ptxczfybxhev0ozo/enhanced_logo-1.jpg?rlkey=kqppdd9ppd4dqgaaqr81fwjak&st=tqf3r9rn&raw=1" alt="AGROinDATA Logo">
+        <div class="login-box">
+            <a href="https://agroindata.github.io/Gradosdias/">
+                ¿Log in AGROinDATA? <img src="https://www.dropbox.com/scl/fi/7ye13ptxczfybxhev0ozo/enhanced_logo-1.jpg?rlkey=kqppdd9ppd4dqgaaqr81fwjak&st=tqf3r9rn&raw=1" alt="Login Icon">
+            </a>
+        </div>
+    </header>
+    <div class="timeline">
+        <button onclick="togglePopup(1)">Products & Services</button>
+        <button onclick="togglePopup(2)">Wating list</button>
+        <button onclick="togglePopup(3)">News</button>
+        <button onclick="togglePopup(4)">About Us</button>
+        <div id="popup1" class="popup">
+            <p>AD17 digitalcount 1.3 click <a href="https://agroindata.github.io/Digitalcount/">This is an online tool to count objects, leave records and make data available to whoever needs it, courtesy of AGROinDATA.</a></p>
+        </div>
+        <div id="popup2" class="popup">
+            <p>Test a FREE demo with you own data like this <a href="https://agroindata.github.io/Gradosdias/">Quiere probar un DEMO gratis con su infromacion como este ejemplo click aqui.</a></p>
+            <p>Talk with us <a href="https://wa.me/56952316352">hable con nosotros.</a></p>
+            <p>O escribanos un email a <a href="mailto:agroindata@gmail.com">agroindata@gmail.com</a></p>
+        </div>
+        <div id="popup3" class="popup">
+            <p>News//Novedades, aqui <a href="https://www.instagram.com/p/DBHoodIzxbY/">Como promover el desarrollo de herramientas digitales.</a></p>
+        </div>
+        <div id="popup4" class="popup">
+            <p>About us AGROinDATA was born at the beginning of 2022 under the idea of ​​a consulting business that seeks to support agriculture in the exploitation and use of data that it possesses. Inspired by new data analysis and artificial intelligence (AI) technologies that make what was thought impossible possible.</p>
+            <p>Agro in Data nace a principios de 2022 bajo la idea de un negocio de consultoría que busca apoyar a la agricultura en la explotación y uso de los datos que posee. Inspirado en nuevas tecnologías de análisis de datos e inteligencia artificial (IA) que hacen posible lo que se creía imposible.</p>
+            <p>Why analyze the data?</p>
+            <ul>
+                <li>Analyzing data allows you to predict future trends</li>
+                <li>Extract useful information for decision making</li>
+                <li>Improve business strategy</li>
+                <li>Greater competitive advantage</li>
+                <li>optimize processes</li>
+            </ul>
+            <p>“What is not defined cannot be measured. What is not measured can not be improved. What is not improved, always deteriorates” Lord Kelvin</p>
+        </div>
+    </div>
+    <div class="videos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j4eUNJ0aRLE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GilA5MFQfTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FvYG3Q5KJhk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <footer>
+        <a href="#">about//nosotros</a>
+        <a href="#">press//prensa</a>
+        <a href="#">information for investors//información para inversionistas</a>
+        <a href="mailto:agroindata@gmail.com">agroindata@gmail.com</a>
+        <p>Copyright AGROinDATA 2025 All right reserved //todos los derechos reservados</p>
+    </footer>
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-9dc8c3d4-4586-4c32-a816-7601b3bb3dc0" data-elfsight-app-lazy></div>
+    <script>
+        function togglePopup(id) {
+            var popup = document.getElementById('popup' + id);
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
